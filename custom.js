@@ -17,7 +17,7 @@ function init(){
     /** Togglea un semestre y los que esten en la misma fila */
     function toggleItemWithRow(itemIndex){
         
-        var itemsPerRow = 3;
+        var itemsPerRow = 1;
         var rowIndex = Math.floor(itemIndex / itemsPerRow);
         
         var firstOfRow = rowIndex * itemsPerRow; //indice del primer elemento de la fila
@@ -43,16 +43,10 @@ function init(){
 
         $('.semester-container .semester-courses')
        
-        $('.semester-header').click( function(e) {
-            var elementId = $(this).data('val');
-            toggleItemWithRow(8);                    
-
-    
-
-            
-            
-    
-        })
+        $('.pensum').on('click', '.semester-header',  function(e) {
+            var semesterIdx= $(this).index(".semester-header");
+            toggleItemWithRow(semesterIdx);                        
+        });
      
      });
 }

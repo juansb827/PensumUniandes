@@ -1,20 +1,15 @@
+
+
+
 .pensum {
+    font-size: 100%;
     display: flex;
-    flex-flow: row wrap;
-}
-
-.pensum .semester-container{
-    flex: 0 1 100%;   
-    /*
-    border: 1px solid black; */
-}
-
-.pensum .semester-container{
-    flex: 0 1 100%;   
-    /*border: 1px solid black; 
-    border-top: 0 none; */
-    border-radius: 5px;
+    flex-wrap: wrap;
     
+}
+
+.pensum .semester-container{
+    flex: 0 1 100%;    
     
 }
 
@@ -34,21 +29,19 @@
 
     
 } */
+
+
 .semester-container .semester-header{
     background-color: lightgreen;
+    height: 3em;
 }
+
 .semester-container .semester-courses{
     display: flex;
-    flex-flow: column;
+    flex-flow: column nowrap;
 }
 
-.semester-courses .course-box{
-    /* border-top: 1px solid black; */
-}
 
-.course-box .empty-box{
-    border: 0 none;
-}
 
 
 .semester-container .semester-header{
@@ -56,10 +49,47 @@
     margin: -3px 0 0 -3px;
 }
 
+
+
+.course-box .empty-box{
+    border: 0 none;
+}
+
 .semester-courses .course-box{
+    
     border: 3px solid black;   
     margin: -3px 0 0 -3px;
+    padding: 1em;
+    
+    
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 10em;
 }
+
+.course-box .course-name{
+    flex: 1 1 ;
+    margin: 0;
+    padding: 0;
+}
+
+.course-box .course-code{
+    flex: 0 1 3em;
+    line-height: 3em;
+    margin: 0;
+    padding: 0;
+}
+
+.course-box .creds-icon{
+    
+    background-color: gray;
+    border-radius: 100%;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+   
+} 
 
 .semester-courses .course-box.empty-box{
     border-color: transparent;  
@@ -82,18 +112,45 @@
 
 }
 
-/* Desktop */
 
-@media screen and (min-width: 1024px){
 
- 
-    .course-box{
-        height: 100px;
+/* Large */
+
+@media all and (min-width: 1024px){
+
+    .pensum{
+        flex-wrap:nowrap;
     }
+    
 
     .pensum .semester-container{
-        flex: 1 1;   /*
+        width: 10%;
+        flex: 0 0 auto;   
+           /*
         border: 1px solid black; */
     }
 
+}
+
+/* Extra Large */
+@media all and (min-width: 1200px){
+
+    .pensum{
+        flex-wrap:nowrap;
+    }
+    
+
+    .pensum .semester-container{
+        
+        flex: 1 1 auto;
+        width: 0   
+           /*
+        border: 1px solid black; */
+    }
+
+}
+
+/* Util */
+.text-centered{
+    text-align: center;
 }
