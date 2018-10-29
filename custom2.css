@@ -1,0 +1,154 @@
+
+
+
+.pensum {
+    font-size: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.pensum .semester-container{
+    /*flex: 0 1 100%;    */
+    
+}
+
+
+
+/*
+.pensum .semester-container.division::after{
+    content: " ";
+    display: block;
+    position: relative;
+    height: 5px;
+    background: black;
+    width: 100%;
+    left: 0px;
+    
+    
+
+    
+} */
+
+
+.semester-container .semester-header{
+    background-color: lightgreen;
+    height: 3em;
+}
+
+.semester-container .semester-courses{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+
+
+
+.semester-container .semester-header{
+    border: 3px solid black;
+    margin: -3px 0 0 -3px;
+}
+
+
+
+.course-box .empty-box{
+    border: 0 none;
+}
+
+.semester-courses .course-box{
+    
+    border: 3px solid black;   
+    margin: -3px 0 0 -3px;
+    padding: 1em;
+    
+    
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    height: 10em;
+}
+
+.course-box .course-name{
+    flex: 1 1 ;
+    margin: 0;
+    padding: 0;
+}
+
+.course-box .course-code{
+    flex: 0 1 3em;
+    line-height: 3em;
+    margin: 0;
+    padding: 0;
+}
+
+.course-box .creds-icon{
+    
+    background-color: gray;
+    border-radius: 100%;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+   
+} 
+
+.semester-courses .course-box.empty-box{
+    border-color: transparent;  
+    
+   /*  background-color: yellow;   */
+    box-sizing: content-box;
+    background-color : yellow;
+    z-index: -1;
+}
+
+/* Pantallas Medianas*/
+
+@media screen and (min-width: 768px){
+  
+
+    .pensum .semester-container{
+        flex: 1 1 33%;   
+        /* border: 1px solid black;  */
+    } 
+
+}
+
+
+
+/* Large */
+
+@media all and (min-width: 1024px){
+
+    .pensum{
+        flex-wrap:nowrap;
+    }
+    
+
+    .pensum .semester-container{
+        width: 10%;
+        flex: 0 1 auto;   
+           /*
+        border: 1px solid black; */
+    }
+
+}
+
+/* Extra Large */
+@media all and (min-width: 1200px){
+
+    .pensum{
+        flex-wrap:nowrap;
+    }
+    
+
+    .pensum .semester-container{               
+        width: 0px;
+        flex: 1 1 0px;
+            
+    }
+
+}
+
+/* Util */
+.text-centered{
+    text-align: center;
+}
