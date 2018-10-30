@@ -1,131 +1,192 @@
+/* 
+    Antes modificar:
+        Remover vendor-prefixes:
+            Entrar a https://autoprefixer.github.io/ y en 'filter >100%'
+    Despues de modificar:
+        Agregar vendor-prefixes de nuevo
+            Entrar a https://autoprefixer.github.io/ y en filter poner 'last 4 versions'
 
-  .grid-wrapper * {
-    box-sizing: border-box;
+*/
+.grid-wrapper.pensum-wrapper * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: arial;
   }
-
-  .grid-wrapper{
-      
-      box-sizing: border-box;
-      position: relative;
-      margin: 0 auto;
-      
-      
-      
-      
-  }
-
-  /*Estilos cuadricula*/
-
-  .pensum {
-    overflow-x: auto;
+  
+  .grid-wrapper.pensum-wrapper {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    position: relative;
     margin: 0 auto;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 3px;
+  
+  
+    font-size: 0.8rem;
+    overflow-x: auto;
   }
-
-  .semester-container {
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    word-break: break-word;
-
-    flex: 0 1 100%;
-    /* border: 1px solid black;  */
-  }
-
-  .semester-courses .course-box {
-    border: 3px solid black;
-    padding: 1em;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    height: 10em;
-  }
-
-  .semester-container .semester-header {
-    background-color: rgba(144, 238, 144, 0.699);
-    border: 3px solid orangered;
-    height: 3em;
-  }
-
-  .semester-container .course-box {
-    margin-top: -3px;
-  }
-
-  .semester-container .semester-courses,
-  .semester-container .semester-header {
-    margin-left: -3px;
-  }
-
-  @media screen and (min-width: 768px) {
-    .semester-container {
-        flex: 0 0 calc(100% / 3);
-    }
+  
+  /*Estilos cuadricula*/
+  
+  /* Bordes */
+  .semester-container .course-box,
+  .semester-container .semester-header,
+  .semester-container .semester-credits-sum {
+    -webkit-box-shadow: inset 0 0 0 1px lightgray;
+            box-shadow: inset 0 0 0 1px lightgray; /* Se bugea menos que border al hacer zoom*/
     
   }
-  /* Large */
-  @media screen and (min-width: 1000px) {
-    .grid-wrapper {
-      width: 95%;
-    }
-    .pensum {
-      flex-wrap: nowrap;
-    }
-    .semester-container {
-      flex: 0 0 calc(100% / 10);
-    }
-
-    /*
-    .semester-container:nth-of-type(1) .semester-courses,
-    .semester-container:nth-of-type(1) .semester-header{
-        margin-left: 0px;
-    } */
+  
+  .semester-container .empty-box{
+      -webkit-box-shadow: inset 0 0 0 1px transparent;
+              box-shadow: inset 0 0 0 1px transparent; 
   }
-
-  /* Large */
-
-  @media screen and (min-width: 1200px) {
-    .semester-container {
-      flex: 0 0 calc(100% / 12);
-    }
+  
+  .semester-container .course-box,
+  .semester-container .semester-header,
+  .semester-container .semester-credits-sum {
+    margin-top: -1px;
   }
-
-  /*Estilos cuadricula*/
-
-  .semester-container .semester-courses {
+  
+  .semester-container .semester-courses,
+  .semester-container .semester-header,
+  .semester-container .semester-credits-sum {
+    margin-left: -1px;
+  }
+  
+  .grid-wrapper .pensum {
+    margin: 0 auto;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column nowrap;
-    position: relative;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    padding: 1px;
   }
-
-  .semester-container .semester-header {
+  
+  .pensum  .semester-container {
+    -webkit-box-flex: 1 !important    ;
+        -ms-flex: 1 0 8em !important    ;
+            flex: 1 0 8em !important    ;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-
-  .course-box .course-name {
-    flex: 1 1;
-    margin: 0;
-    padding: 0;
+  
+  .semester-container .empty-space{
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0 0px;
+              flex: 1 0 0;
   }
-
+  
+  
+  
+  .semester-container .semester-header {    
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 4em;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-transform: uppercase;
+  }
+  
+  .semester-container .semester-credits-sum {
+      height: 3em;
+      line-height: 3em;
+      text-align: center;
+      
+    }
+  
+    .semester-courses .course-box {
+      cursor: pointer;
+      padding: 1em;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column;
+              flex-flow: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      height: 14em;
+      text-align: center;
+      overflow: hidden;
+      -webkit-transition: background-color 0.2s ease-out;
+      -o-transition: background-color 0.2s ease-out;
+      transition: background-color 0.2s ease-out;
+      
+    }
+    
+    .course-box .division-line {
+      width: 100%;
+      border: 0;
+      border-top:2px solid rgba(0,0,0,.1);
+    }
+    
+    .course-box .course-name {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0 5em;
+              flex: 1 0 5em;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+         text-overflow: ellipsis;
+    }
+  
   .course-box .course-code {
-    flex: 0 1 3em;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 3em;
+            flex: 0 1 3em;
     line-height: 3em;
     margin: 0;
     padding: 0;
   }
-
+  
   .course-box .creds-icon {
-    background-color: gray;
+    text-align: center;
+    background-color: #f2f2f2;
+    border: 1px solid lightgray;
     border-radius: 100%;
     height: 2em;
     width: 2em;
     line-height: 2em;
   }
-
-  .semester-courses .course-box.empty-box {
-    border: 6px solid yellow !important;
-    background-color: yellow;
-    z-index: -21;
+  
+ 
+  
+  
+  .semester-container.division-semester .semester-courses,
+  .semester-container.division-semester .empty-space,
+  .semester-container.division-semester .semester-credits-sum{
+      z-index: 2;
   }
-
+  
+  @media screen and (min-width: 768px) {
+      
+  }
+  /* Large */
+  @media screen and (min-width: 968px) {
+      .grid-wrapper.pensum-wrapper {
+      width: 95%;
+    }
+   
+  }
+  
+  /* Extra-Large */
+  @media screen and (min-width: 1250px) {
+    
+  }

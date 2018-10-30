@@ -7,278 +7,911 @@
   <title>Pensum</title>
   <link rel="stylesheet" href="custom.css">
 
-  <!-- <script src="script.js"></script> -->
+  <style>
+    /* Colores */
+
+    .semester-container .semester-header {
+      /*Color 1*/
+      background-color: rgb(0, 133, 124);
+      
+      /*Color 2*/ 
+      color: whitesmoke;
+      
+    }
+
+    .semester-container.division-semester .semester-courses,
+    .semester-container.division-semester .empty-space,
+    .semester-container.division-semester .semester-credits-sum {
+      /* Color 1*/
+      border-right: 2px solid rgb(0, 133, 124);
+      
+      /* rgb(0, 133, 124) */
+
+    }
+
+    .course-box.selected,
+    .course-box:not(.empty-box):hover {
+      /*Color - Semester Seleccionado*/
+      background-color: lightgray;
+      
+    }
+
+    .course-box.prerequisite {
+      /* Color - Prerrequisito */
+      background-color: #16B8F0;
+      
+    }
+
+    .course-box.corequisite {
+      /* Color - Correquisito */
+      background-color: #E9991B;
+      
+    }
+  </style>
+  
 </head>
 
 <body>
-  <div class="grid-wrapper">
+  <div class="grid-wrapper pensum-wrapper">
     <section class="pensum">
 
 
 
       <div class="semester-container">
         <div class="semester-header" data-val="semestre0">
-          Semestre 0
+          Semestre <br> 0
         </div>
         <div id="semestre0" class="semester-courses">
-          <div class="course-box text-centered">
-            <p class="course-name" style="overflow: hidden">
+          <div class="course-box">
+            <div class="course-name" style="">
               Introducción a la Profesión Médica
-            </p>
-            <hr style="height:2px;width: 100%; border:none; color:#ccc; background-color:#ccc;">
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box prerequisite">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1089</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box prerequisite">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box prerequisite">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
             <span class="course-code">MEDI - 1101</span>
             <div class="creds-icon">2</div>
           </div>
           <div class="course-box">
-            Materia 2 Semestre 1
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
           </div>
           <div class="course-box">
-            Materia 3 Semestre 1
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
           </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+
+
+        </div>
+        <div class="semester-credits-sum">
+          18 Créditos
         </div>
       </div>
 
       <div class="semester-container">
         <div class="semester-header" data-val="semestre0">
-          Semestre 0
+          Semestre <br> 0
         </div>
         <div id="semestre0" class="semester-courses">
-          <div class="course-box text-centered">
-            <p class="course-name" style="overflow: hidden">
+          <div class="course-box selected">
+            <div class="course-name" style="">
               Introducción a la Profesión Médica
-            </p>
-            <hr style="height:2px;width: 100%; border:none; color:#ccc; background-color:#ccc;">
-            <span class="course-code">MEDI - 1101</span>
-            <div class="creds-icon">2</div>
-          </div>
-          <div class="course-box">
-            Materia 2 Semestre 1
-          </div>
-          <div class="course-box">
-            Materia 3 Semestre 1
-          </div>
-        </div>
-      </div>
-
-      <div class="semester-container">
-        <div class="semester-header" data-val="semestre0">
-          Semestre 0
-        </div>
-        <div id="semestre0" class="semester-courses">
-          <div class="course-box text-centered">
-            <p class="course-name" style="overflow: hidden">
-              Introducción a la Profesión Médica
-            </p>
-            <hr style="height:2px;width: 100%; border:none; color:#ccc; background-color:#ccc;">
-            <span class="course-code">MEDI - 1101</span>
-            <div class="creds-icon">2</div>
-          </div>
-          <div class="course-box">
-            Materia 2 Semestre 1
-          </div>
-          <div class="course-box">
-            Materia 3 Semestre 1
-          </div>
-        </div>
-      </div>
-
-      <div class="semester-container">
-        <div class="semester-header" data-val="semestre0">
-          Semestre 0
-        </div>
-        <div id="semestre0" class="semester-courses">
-          <div class="course-box text-centered">
-            <p class="course-name" style="overflow: hidden">
-              Introducción a la Profesión Médica
-            </p>
-            <hr style="height:2px;width: 100%; border:none; color:#ccc; background-color:#ccc;">
-            <span class="course-code">MEDI - 1101</span>
-            <div class="creds-icon">2</div>
-          </div>
-          <div class="course-box">
-            Materia 2 Semestre 1
-          </div>
-          <div class="course-box">
-            Materia 3 Semestre 1
-          </div>
-        </div>
-      </div>
-
-      <div class="semester-container">
-        <div class="semester-header" data-val="semestre0">
-          Semestre 0
-        </div>
-        <div id="semestre0" class="semester-courses">
-          <div class="course-box text-centered">
-            <p class="course-name" style="overflow: hidden">
-              Introducción a la Profesión Médica
-            </p>
-            <hr style="height:2px;width: 100%; border:none; color:#ccc; background-color:#ccc;">
-            <span class="course-code">MEDI - 1101</span>
-            <div class="creds-icon">2</div>
-          </div>
-          <div class="course-box empty-box  ">
-            Materia 2 Semestre 1
-          </div>
-          <div class="course-box">
-            Materia 3 Semestre 1
-          </div>
-        </div>
-      </div>
-
-
-      <div class="semester-container">
-        <div class="semester-header" data-val="semestre0">
-          Semestre 0
-        </div>
-        <div id="semestre0" class="semester-courses">
-          <div class="course-box text-centered ">
-            <p class="course-name" style="overflow: hidden">
-              Introducción a la Profesión Médica
-            </p>
-            <hr style="height:2px;width: 100%; border:none; color:#ccc; background-color:#ccc;">
+            </div>
+            <hr class="division-line">
             <span class="course-code">MEDI - 1101</span>
             <div class="creds-icon">2</div>
           </div>
           <div class="course-box empty-box">
-            Materia 2 Semestre 1
+
+          </div>
+          <div class="course-box corequisite">
+            <div class="course-name " style="">
+              Ejemplo
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+
+
+
+
+        </div>
+        <div class="empty-space"></div>
+        <div class="semester-credits-sum">
+          18 Créditos
+        </div>
+      </div>
+
+      <div class="semester-container division-semester">
+        <div class="semester-header" data-val="semestre0">
+          Semestre <br> 0
+        </div>
+        <div id="semestre0" class="semester-courses">
+          <div class="course-box ">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
           </div>
           <div class="course-box empty-box">
-            Materia 3 Semestre 1
+
           </div>
+
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box empty-box">
+
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+
+
+        </div>
+        <div class="empty-space"></div>
+        <div class="semester-credits-sum">
+          18 Créditos
         </div>
       </div>
 
       <div class="semester-container">
         <div class="semester-header" data-val="semestre0">
-          Semestre 0
+          Semestre <br> 0
         </div>
         <div id="semestre0" class="semester-courses">
-          <div class="course-box text-centered">
-            <p class="course-name" style="overflow: hidden">
+          <div class="course-box empty-box">
+
+          </div>
+          <div class="course-box empty-box">
+
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
               Introducción a la Profesión Médica
-            </p>
-            <hr style="height:2px;width: 100%; border:none; color:#ccc; background-color:#ccc;">
+            </div>
+            <hr class="division-line">
             <span class="course-code">MEDI - 1101</span>
             <div class="creds-icon">2</div>
           </div>
           <div class="course-box">
-            Materia 2 Semestre 1
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
           </div>
           <div class="course-box">
-            Materia 3 Semestre 1
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
           </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+
+
+        </div>
+        <div class="semester-credits-sum">
+          18 Créditos
         </div>
       </div>
 
       <div class="semester-container">
         <div class="semester-header" data-val="semestre0">
-          Semestre 0
+          Semestre <br> 0
         </div>
         <div id="semestre0" class="semester-courses">
-          <div class="course-box text-centered">
-            <p class="course-name" style="overflow: hidden">
+          <div class="course-box">
+            <div class="course-name" style="">
               Introducción a la Profesión Médica
-            </p>
-            <hr style="height:2px;width: 100%; border:none; color:#ccc; background-color:#ccc;">
+            </div>
+            <hr class="division-line">
             <span class="course-code">MEDI - 1101</span>
             <div class="creds-icon">2</div>
           </div>
           <div class="course-box">
-            Materia 2 Semestre 1
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
           </div>
           <div class="course-box">
-            Materia 3 Semestre 1
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
           </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+
+
+        </div>
+        <div class="semester-credits-sum">
+          18 Créditos
         </div>
       </div>
 
       <div class="semester-container">
         <div class="semester-header" data-val="semestre0">
-          Semestre 0
+          Semestre <br> 0
         </div>
         <div id="semestre0" class="semester-courses">
-          <div class="course-box text-centered">
-            <p class="course-name" style="overflow: hidden">
+
+          <div class="course-box">
+            <div class="course-name" style="">
               Introducción a la Profesión Médica
-            </p>
-            <hr style="height:2px;width: 100%; border:none; color:#ccc; background-color:#ccc;">
+            </div>
+            <hr class="division-line">
             <span class="course-code">MEDI - 1101</span>
             <div class="creds-icon">2</div>
           </div>
           <div class="course-box">
-            Materia 2 Semestre 1
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
           </div>
           <div class="course-box">
-            Materia 3 Semestre 1
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
           </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+
+
+        </div>
+        <div class="empty-space"></div>
+        <div class="semester-credits-sum">
+          18 Créditos
         </div>
       </div>
 
       <div class="semester-container">
         <div class="semester-header" data-val="semestre0">
-          Semestre 0
+          Semestre <br> 0
         </div>
         <div id="semestre0" class="semester-courses">
-          <div class="course-box text-centered">
-            <p class="course-name" style="overflow: hidden">
+          <div class="course-box">
+            <div class="course-name" style="">
               Introducción a la Profesión Médica
-            </p>
-            <hr style="height:2px;width: 100%; border:none; color:#ccc; background-color:#ccc;">
+            </div>
+            <hr class="division-line">
             <span class="course-code">MEDI - 1101</span>
             <div class="creds-icon">2</div>
           </div>
           <div class="course-box">
-            Materia 2 Semestre 1
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
           </div>
           <div class="course-box">
-            Materia 3 Semestre 1
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
           </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+
+
+        </div>
+        <div class="semester-credits-sum">
+          18 Créditos
         </div>
       </div>
 
       <div class="semester-container">
         <div class="semester-header" data-val="semestre0">
-          Semestre 11
+          Semestre <br> 0
         </div>
         <div id="semestre0" class="semester-courses">
-          <div class="course-box text-centered">
-            <p class="course-name" style="overflow: hidden">
+          <div class="course-box">
+            <div class="course-name" style="">
               Introducción a la Profesión Médica
-            </p>
-            <hr style="height:2px;width: 100%; border:none; color:#ccc; background-color:#ccc;">
+            </div>
+            <hr class="division-line">
             <span class="course-code">MEDI - 1101</span>
             <div class="creds-icon">2</div>
           </div>
           <div class="course-box">
-            Materia 2 Semestre 1
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
           </div>
           <div class="course-box">
-            Materia 3 Semestre 1
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
           </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+
+
+        </div>
+        <div class="semester-credits-sum">
+          18 Créditos
         </div>
       </div>
 
       <div class="semester-container">
         <div class="semester-header" data-val="semestre0">
-          Semestre 12
+          Semestre <br> 0
         </div>
         <div id="semestre0" class="semester-courses">
-          <div class="course-box text-centered">
-            <p class="course-name" style="overflow: hidden">
+          <div class="course-box">
+            <div class="course-name" style="">
               Introducción a la Profesión Médica
-              Introducción a la Profesión Médica
-            </p>
-            <hr style="height:2px;width: 100%; border:none; color:#ccc; background-color:#ccc;">
+            </div>
+            <hr class="division-line">
             <span class="course-code">MEDI - 1101</span>
             <div class="creds-icon">2</div>
           </div>
           <div class="course-box">
-            Materia 2 Semestre 1
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
           </div>
           <div class="course-box">
-            Materia 3 Semestre 1
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
           </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+
+
+        </div>
+        <div class="semester-credits-sum">
+          18 Créditos
+        </div>
+      </div>
+
+      <div class="semester-container">
+        <div class="semester-header" data-val="semestre0">
+          Semestre <br> 0
+        </div>
+        <div id="semestre0" class="semester-courses">
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+
+
+        </div>
+        <div class="semester-credits-sum">
+          18 Créditos
+        </div>
+      </div>
+
+      <div class="semester-container division-semester">
+        <div class="semester-header" data-val="semestre0">
+          Semestre <br> 0
+        </div>
+        <div id="semestre0" class="semester-courses">
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+
+
+        </div>
+        <div class="semester-credits-sum">
+          18 Créditos
+        </div>
+      </div>
+
+      <div class="semester-container ">
+        <div class="semester-header" data-val="semestre0">
+          Semestre <br> 0
+        </div>
+        <div id="semestre0" class="semester-courses">
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+          <div class="course-box">
+            <div class="course-name" style="">
+              Introducción a la Profesión Médica
+            </div>
+            <hr class="division-line">
+            <span class="course-code">MEDI - 1101</span>
+            <div class="creds-icon">2</div>
+          </div>
+
+
+        </div>
+        <div class="semester-credits-sum">
+          18 Créditos
         </div>
       </div>
 
