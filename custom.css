@@ -10,29 +10,44 @@
 
 /* Cuadricula*/
 .progam-pensum-container * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: arial;
 }
 
 .progam-pensum-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 2em;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 16px;
 }
 
 /* Descripción Programa*/
 .progam-pensum-container .program-description {
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 85%;
-  font-size: 0.75rem;
+  font-size: 0.75em;
 }
 .program-description p {
-  flex: 1 0 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
   line-height: 1.5;
   text-align: center;
 }
@@ -73,8 +88,10 @@
 .grid-wrapper.pensum-wrapper {
   position: relative;
   margin: 2em auto;
+  
 
   overflow-x: auto;
+  overflow-y: hidden;
 }
 
 /*Estilos cuadricula*/
@@ -84,22 +101,27 @@
 .progam-pensum-container .sample-course,
 .semester-container .semester-header,
 .semester-container .semester-credits-sum {
-  box-shadow: inset 0 0 0 1px lightgray; /* Se bugea menos que border al hacer zoom*/
+  -webkit-box-shadow: inset 0 0 0 1px lightgray;
+          box-shadow: inset 0 0 0 1px lightgray; /* Se bugea menos que border al hacer zoom*/
 }
 
 .semester-container .empty-box {
   
-          box-shadow: inset 0 0 0 1px transparent;
+          -webkit-box-shadow: inset 0 0 0 1px transparent;
+  
+                  box-shadow: inset 0 0 0 1px transparent;
 }
 
 /* Borde Izquirdo Para Primer Columna*/
 .semester-container:nth-of-type(1) .semester-courses{
-  box-shadow: inset 1px 0 0 0 lightgray; 
+  -webkit-box-shadow: inset 1px 0 0 0 lightgray;
+          box-shadow: inset 1px 0 0 0 lightgray; 
 }
 
 /* Borde Derecho Para Ultima Columna*/
 .semester-container:nth-last-of-type(1) .semester-courses{ 
-  box-shadow: inset -1px 0 0 0 lightgrey;
+  -webkit-box-shadow: inset -1px 0 0 0 lightgrey; 
+          box-shadow: inset -1px 0 0 0 lightgrey;
 }
  
 
@@ -119,27 +141,47 @@
 .grid-wrapper .pensum {
   margin: 0 auto;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   padding: 1px;
 }
 
 .pensum .semester-container {
   width: 8em;
-  flex: 1 0 auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .semester-container .empty-space {
-  flex: 1 0 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
 }
 
 .semester-container .semester-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+
+      -ms-flex-align: center;
+
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 4em;
   text-align: center;
   font-weight: bold;
@@ -157,31 +199,47 @@
 .progam-pensum-container .sample-course {
   cursor: pointer;
   padding: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column;
-  align-items: center;
-  height: 14em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 16em;
   text-align: center;
   overflow: hidden;
+  -webkit-transition: background-color 0.2s ease-out;
+  -o-transition: background-color 0.2s ease-out;
   transition: background-color 0.2s ease-out;
 }
 
 .course-box .division-line {
   width: 100%;
   border: 0;
+  margin: 0;
   border-top: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 .course-box .course-name {
-  flex: 1 0 5em;
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 5em;
+          flex: 1 0 5em;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
 }
 
 .course-box .course-code {
-  flex: 0 1 3em;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 3em;
+          flex: 0 1 3em;
   line-height: 3em;
   margin: 0;
   padding: 0;
@@ -209,16 +267,23 @@
   }
 
   .program-description .course-box-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .course-box-info .btns-wrapper {
     text-align: left;
   }
   .program-description ul {
-    flex: 1 1 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 0n;
+            flex: 1 1 0n;
+    
   }
   .program-description .sample-course {
-    flex: 0 0 auto;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
   }
 }
 /* Large */
